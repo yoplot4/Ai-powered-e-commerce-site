@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile Strategy Review</title>
+  <style>
+    /* Google Font import for modern, clean sans-serif typography */
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      overflow: hidden;
+      background-color: #0d131a;
+      color: #ffffff;
+    }
+
+    /* Container layout using Flexbox */
+    .hero-container {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 50px;
+      /*
+        Background Gradient recreating the mesh look:
+        - Black / Dark Teal overlay in top left & bottom
+        - Vibrant blue gradient in the center/bottom
+        - Soft violet/purple tint in middle right
+        - Subtle warm amber tint on top right
+      */
+      background: 
+        radial-gradient(ellipse at 100% 0%, rgba(212, 168, 126, 0.25) 0%, transparent 40%),
+        radial-gradient(circle at 85% 50%, rgba(132, 110, 180, 0.45) 0%, transparent 50%),
+        radial-gradient(circle at 45% 85%, rgba(30, 115, 220, 0.8) 0%, transparent 65%),
+        radial-gradient(circle at 0% 0%, rgba(0, 0, 0, 0.95) 0%, transparent 60%),
+        linear-gradient(135deg, #020813 0%, #173255 50%, #201a35 100%);
+    }
+
+    /* Subtle grainy texture layer using SVG noise filter */
+    .hero-container::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.18;
+      pointer-events: none;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    }
+
+    /* Typography */
+    .title-wrapper {
+      margin-top: 10px;
+      max-width: 650px;
+      z-index: 1;
+    }
+
+    h1 {
+      font-size: clamp(3rem, 7.5vw, 6.2rem);
+      font-weight: 400;
+      line-height: 0.94;
+      letter-spacing: -0.04em;
+      color: #ffffff;
+      white-space: pre-line;
+    }
+
+    /* Footer / Metadata Section */
+    .footer {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      z-index: 1;
+    }
+
+    /* Square accent icon on the bottom left */
+    .icon-square {
+      width: 18px;
+      height: 18px;
+      background-color: rgba(255, 255, 255, 0.35);
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    /* Footer Text */
+    .footer-text {
+      display: flex;
+      gap: 120px;
+      font-size: 0.72rem;
+      color: rgba(255, 255, 255, 0.7);
+      letter-spacing: 0.02em;
+    }
+
+    .footer-text span {
+      white-space: nowrap;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .hero-container {
+        padding: 30px 24px;
+      }
+      .footer {
+        gap: 20px;
+      }
+      .footer-text {
+        flex-direction: column;
+        gap: 6px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero-container">
+    <!-- Main Header -->
+    <div class="title-wrapper">
+      <h1>Mobile
+Strategy
+Review</h1>
+    </div>
+
+    <!-- Footer Meta Bar -->
+    <div class="footer">
+      <div class="icon-square"></div>
+      <div class="footer-text">
+        <span>Reviews / Mobile Strategy</span>
+        <span>Product Review — Month XX</span>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

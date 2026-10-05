@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/register.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="left-header-container">
+          <div class="left-header-container-logo">
+            <a href="index.html">
+              <img class="logo-img" src="./images/logo.jpg" alt="logo" />
+            </a>
+          </div>
+          <div class="left-header-container-title">
+            <h2 class="header-title">Ai Powered E-Commerce</h2>
+          </div>
+        </div>
+        <div class="middle-header-container">
+          <div class="search-container">
+            <input type="text" placeholder="Search..." />
+            <img
+              class="search-icon"
+              src="./images/search.png"
+              alt="search-icon"
+            />
+          </div>
+          <div class="navbar-container">
+            <ul class="navbar-list">
+              <li class="navbar-list-item"><a href="index.html">Home</a></li>
+              <li class="navbar-list-item"><a href="#">Products</a></li>
+              <li class="navbar-list-item"><a href="#">About</a></li>
+              <li class="navbar-list-item"><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="right-header-container">
+          <div class="cart-container">
+            <div class="count-cart">
+              <span>1</span>
+            </div>
+            <a href="#">
+              <img src="./images/cart.png" alt="cart image" />
+            </a>
+          </div>
+          <div class="signUp-container">
+            <a href="register.html">Sign Up</a>
+          </div>
+          <div class="login-container">
+            <a href="login.html">Login</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="main-section">
+      <div class="signUp-container">
+        <form action="/signUp" method="post">
+          <label for="firstname">First Name</label>
+          <input
+            type="text"
+            placeholder="Enter First name"
+            required
+          /><br /><br />
+          <label for="middlename">Middle Name</label>
+          <input
+            type="text"
+            placeholder="Enter middle name"
+            required
+          /><br /><br />
+          <label for="lastname">Last Name</label>
+          <input
+            type="text"
+            placeholder="Enter First name"
+            required
+          /><br /><br />
+          <label for="email"> Email </label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter email"
+            required
+          /><br /><br />
+          <label for="password">Password</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Enter password"
+            required
+          />
+          <label for="city">City:</label>
+          <input type="text" id="city" name="city" maxlength="100" required />
+          <br /><br />
+
+          <!-- Sub City -->
+          <label for="sub_city">Sub City:</label>
+          <input type="text" id="sub_city" name="sub_city" maxlength="100" />
+          <br /><br />
+
+          <!-- Woreda -->
+          <label for="woreda">Woreda:</label>
+          <input type="text" id="woreda" name="woreda" maxlength="50" />
+          <br /><br />
+
+          <!-- Street Address -->
+          <label for="street_address">Street Address:</label>
+          <textarea
+            id="street_address"
+            name="street_address"
+            required
+          ></textarea>
+          <br /><br />
+
+          <!-- Default Address -->
+          <label for="is_default">Set as Default:</label>
+          <input
+            type="checkbox"
+            id="is_default"
+            name="is_default"
+            value="true"
+          />
+          <br /><br />
+        </form>
+      </div>
+    </section>
+    <footer class="footer-container">
+      <!--add modern footer by divide the footer section-->
+      <div class="left-footer">
+        <p class="description">
+          <span>Powered by intelligent technology</span> our platform combines
+          AI-driven recommendations, secure transactions, and seamless shopping
+          experiences. We’re building the future of e‑commerce—personalized,
+          efficient, and customer‑focused
+        </p>
+        <p class="copy-right">
+          &#169; Bell Tech Solutin. All Rights Reserved 2026.
+        </p>
+      </div>
+      <div class="footer-middle">
+        <h3>Stay Updated</h3>
+        <p>Subscribe to get AI-powered shopping tips and updates.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Enter your email" required />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+      <div class="right-footer">
+        <h3>Social Media links</h3>
+        <div class="social-media">
+          <ul>
+            <li><img src="./images/facebook.png" alt="facebook" /></li>
+            <li><img src="./images/instagram.jfif" alt="instagram" /></li>
+            <li><img src="./images/telegram.avif" alt="telegram" /></li>
+            <li><img src="./images/tewiter.png" alt="tewiter" /></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
